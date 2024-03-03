@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Rock</h1>
+            <h1>Paper</h1>
+            <h1>Scissors</h1>
+        </div>
+        <div class="scores">
+            <div class="score computer">
+                <h3>COMPUTER SCORE</h3>
+                <p>0</p>
+            </div>
+            <div class="score user">
+                <h3>YOUR SCORE</h3>
+                <p>0</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="images">
+            <div class="image part1">
+                <div class="icon rock">
+                    <img src="./Images/rock_icon.png" alt="rock">
+                </div>
+                <div class="line1">
+                    <img src="./Images/Line 1.png" alt="line 1">
+                </div>
+                <div class="icon scissor">
+                    <img src="./Images/scissor_icon.png" alt="scissor">
+                </div>
+            </div>
+            <div class="image part2">
+                <div class="line3">
+                    <img src="./Images/Line 3.png" alt="Line 3">
+                </div>
+                <div class="line2">
+                    <img src="./Images/Line 2.png" alt="Line 2">
+                </div>
+            </div>
+            <div class="image part3">
+                <div class="icon paper">
+                    <img src="./Images/paper_icon.png" alt="paper">
+                </div>
+            </div>
+        </div>
+
+        <div class="results tgl">
+            <div class="result user">
+                <p>YOU PICKED</p>
+                <div id="user" class="choice">
+
+                </div>
+            </div>
+            <div class="game_result">
+                <h1>YOU WIN</h1>
+                <p>AGAINST PC</p>
+                <!-- <button>PLAY AGAIN</button> -->
+            </div>
+            <div class="result computer">
+                <p>PC PICKED</p>
+                <div id="computer" class="choice">
+
+                </div>
+            </div>
+        </div>
+        <div class="hurray tgl">
+            <div class="parent">
+                <img class="image1" src="./Images/star.png">
+                <img class="image2" src="./Images/prize.png">
+            </div>
+            <div class="game_result">
+                <h1>HURRAY!!</h1>
+                <p>YOU WON THE GAME</p>
+                <!-- <button>PLAY AGAIN</button> -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section class="rules">
+            <p id="close">X</p>
+            <h3>Game Rules</h3>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                    scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </section>
+        <div class="btn">
+            <button class="tgl">PLAY AGAIN</button>
+        </div>
+        <div class="end">
+
+            <span>RULES</span>
+            <span class="next tgl">NEXT</span>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

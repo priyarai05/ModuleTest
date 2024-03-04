@@ -13,10 +13,6 @@ if (localStorage.getItem('score1') !== null && localStorage.getItem('score2') !=
     localStorage.setItem('score1', user_score.innerHTML)
     localStorage.setItem('score2', computer_score.innerHTML)
 }
-console.log(localStorage.getItem('score1'))
-console.log(localStorage.getItem('score2'))
-console.log(user_score)
-console.log(computer_score)
 
 var user_choice = document.querySelector('#user')
 var pc_choice = document.querySelector('#computer')
@@ -38,8 +34,6 @@ var play_again = document.querySelector('footer button')
 
 function updateScore(score) {
     score.innerHTML = parseInt(score.innerHTML) + 1
-    console.log('s1= ', localStorage.getItem('score1'))
-    console.log('s2= ', localStorage.getItem('score2'))
 }
 
 rules.addEventListener('click', function () {
@@ -93,16 +87,14 @@ icons.forEach(icon => {
         let paper = document.createElement('img')
         paper.src = './Images/paper_icon.png'
         let paper2 = paper.cloneNode(true)
-        // console.log(user_choice)
+
         common()
         if (icon.classList.contains('rock') && computer_choice.classList.contains('rock')) {
-            console.log('Tie Up')
             tieUp('rock', 'rock')
             user_choice.appendChild(rock)
             pc_choice.appendChild(rock2)
         }
         else if (icon.classList.contains('rock') && computer_choice.classList.contains('scissor')) {
-            console.log('You win against PC')
             updateScore(user_score)
             localStorage.setItem('score1', user_score.innerHTML);
             wins('rock', 'scissor')
@@ -110,7 +102,6 @@ icons.forEach(icon => {
             pc_choice.appendChild(scissor)
         }
         else if (icon.classList.contains('rock') && computer_choice.classList.contains('paper')) {
-            console.log('You lost against PC')
             updateScore(computer_score)
             localStorage.setItem('score2', computer_score.innerHTML);
             loss('rock', 'paper')
@@ -118,13 +109,11 @@ icons.forEach(icon => {
             pc_choice.appendChild(paper)
         }
         else if (icon.classList.contains('scissor') && computer_choice.classList.contains('scissor')) {
-            console.log('Tie Up')
             tieUp('scissor', 'scissor')
             user_choice.appendChild(scissor)
             pc_choice.appendChild(scissor2)
         }
         else if (icon.classList.contains('scissor') && computer_choice.classList.contains('rock')) {
-            console.log('You lost against PC')
             updateScore(computer_score)
             localStorage.setItem('score2', computer_score.innerHTML);
             loss('scissor', 'rock')
@@ -132,7 +121,6 @@ icons.forEach(icon => {
             pc_choice.appendChild(rock)
         }
         else if (icon.classList.contains('scissor') && computer_choice.classList.contains('paper')) {
-            console.log('You win against PC')
             updateScore(user_score)
             localStorage.setItem('score1', user_score.innerHTML);
             wins('scissor', 'paper')
@@ -140,7 +128,6 @@ icons.forEach(icon => {
             pc_choice.appendChild(paper)
         }
         else if (icon.classList.contains('paper') && computer_choice.classList.contains('scissor')) {
-            console.log('You lost against PC')
             updateScore(computer_score)
             localStorage.setItem('score2', computer_score.innerHTML);
             loss('paper', 'scissor')
@@ -148,7 +135,6 @@ icons.forEach(icon => {
             pc_choice.appendChild(scissor)
         }
         else if (icon.classList.contains('paper') && computer_choice.classList.contains('rock')) {
-            console.log('You win against PC')
             updateScore(user_score)
             localStorage.setItem('score1', user_score.innerHTML);
             wins('paper', 'rock')
@@ -156,7 +142,6 @@ icons.forEach(icon => {
             pc_choice.appendChild(rock)
         }
         else if (icon.classList.contains('paper') && computer_choice.classList.contains('paper')) {
-            console.log('Tie Up')
             tieUp('paper', 'paper')
             user_choice.appendChild(paper)
             pc_choice.appendChild(paper2)
@@ -172,8 +157,6 @@ function getRandomItem(arr) {
     const item = arr[randomIndex];
     return item;
 }
-
-
 
 function common() {
     user_choice.innerHTML = ''
